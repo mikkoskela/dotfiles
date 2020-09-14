@@ -1,0 +1,31 @@
+# Powerlevel
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(zoxide init zsh --cmd c)"
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+test -f ~/scripts/completion.zsh.inc && source ~/scripts/completion.zsh.inc
+
+# Kubectl
+test -f ~/.kubectl_zsh_completion && source ~/.kubectl_zsh_completion
+
+# SDKman
+export SDKMAN_DIR="${HOME}/.sdkman"
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
+
+autoload -U +X bashcompinit && bashcompinit
+
+# Nomad
+complete -o nospace -C ${HOME}/bin/nomad nomad
+complete -C /usr/bin/nomad nomad
+
+# >>>> Vagrant command completion (start)
+. /opt/vagrant/embedded/gems/2.2.19/gems/vagrant-2.2.19/contrib/bash/completion.sh
+# <<<<  Vagrant command completion (end)
+
+# Cargo
+. "$HOME/.cargo/env"
