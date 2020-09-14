@@ -1,0 +1,73 @@
+[user]
+    name = redactedName
+    email = redactedEmail
+[alias]
+    wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+    rt = ! git for-each-ref --sort=creatordate --format '%(refname) %(creatordate)' refs/tags | tail -n 10
+    s = status
+    cp = cherry-pick
+    fa = fetch --all
+    d = diff
+    dc = diff --cached
+    dh = diff HEAD
+    co = checkout
+    ri = rebase -i
+    rom = rebase origin/master
+    amend = commit --amend
+    fix = commit --fixup
+    head = !git r -1
+    adog = log --all --decorate --color --graph
+    h = !git head                                       # h = head
+    hp = "!. ~/.githelpers && show_git_head"            # r = recent commits, only current branch
+    r = !GIT_NO_PAGER=1 git l -15 
+    ra = !git r --all                                   # ra = recent commits, all reachable refs
+    l = "!. ~/.githelpers && pretty_git_log"            # l = all commits, only current branch
+    la = !git l --all                                   # la = all commits, all reachable refs
+    b = "!. ~/.githelpers && pretty_git_branch"         # b = all branches
+    bs = "!. ~/.githelpers && pretty_git_branch_sorted" # bs = all branches, sorted by last commit date
+    rb = "for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'"
+    # Branch By Author
+    bba = "for-each-ref --format='%(color:cyan)%(authordate:format:%m/%d/%Y %I:%M %p)    %(align:25,left)%(color:yellow)%(authorname)%(end) %(color:reset)%(refname:strip=3)' --sort=authordate refs/remotes"
+    squash = "!f() { \
+        : git show ; \
+        git -c sequence.editor=; rebase -i ${1:-@~10}; \
+        }; f"
+[core]
+    autocrlf = false
+    pager = less -F -X
+[diff]
+    colorMoved = default
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    features = side-by-side line-numbers decorations
+    syntax-theme = Dracula
+    plus-style = syntax "#003800"
+    minus-style = syntax "#3f0001"
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+    hunk-header-decoration-style = cyan box ul
+[delta "line-numbers"]
+    line-numbers-left-style = cyan
+    line-numbers-right-style = cyan
+    line-numbers-minus-style = 124
+    line-numbers-plus-style = 28
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[merge]
+    conflictstyle = diff3
+[rebase]
+    autostash = true
+    autosquash = true
+[pull]
+    rebase = true
