@@ -51,7 +51,6 @@ nmap <Leader>f :tag<space>
 "nmap <Leader>f :tag<space>
 
 "---Plugins---"
-so ~/.vim/.plugins
 let NERDTreeHijackNetrw = 0
 
 "---Auto-commands---"
