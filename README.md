@@ -2,9 +2,23 @@
 
 A collection of my dotfiles. Managed using a bare Git repository.
 
-Alias for managing the files: `alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
+## Usage
 
-When cloned to a new computer, hide untracked files with:
+1. Clone to a new computer
 
-`dotfiles config --local status.showUntrackedFiles no`
+```sh
+git clone --bare https://github.com/mikkoskela/dotfiles.git ~/.dotfiles
+```
+
+2. Set alias
+
+```sh
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+```
+
+3. Hide untracked files
+
+```sh
+dotfiles config --local status.showUntrackedFiles no
+```
 
