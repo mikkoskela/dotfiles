@@ -23,9 +23,11 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C ${HOME}/bin/nomad nomad
 complete -C /usr/bin/nomad nomad
 
-# >>>> Vagrant command completion (start)
-. /opt/vagrant/embedded/gems/2.2.19/gems/vagrant-2.2.19/contrib/bash/completion.sh
-# <<<<  Vagrant command completion (end)
-
 # Cargo
 . "$HOME/.cargo/env"
+
+# Vagrant
+# >>>> Vagrant command completion (start)
+fpath=(/tmp/.mount_vagranZsM86E/usr/gembundle/gems/vagrant-2.2.19/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)
