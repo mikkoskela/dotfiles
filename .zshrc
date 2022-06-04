@@ -128,7 +128,7 @@ alias ll="exa --long --classify --icons --all --group-directories-first --header
 alias tree="exa --tree"
 alias lt="lsd -hF --tree"
 alias lta="lsd -ahF --tree"
-alias fd="fdfind --hidden --no-ignore --exclude '.git' --exclude '*venv*'"
+alias fd="fd --hidden --no-ignore --exclude '.git' --exclude '*venv*'"
 alias b="bat --theme=OneHalfDark"
 alias g="git"
 alias gs="git status"
