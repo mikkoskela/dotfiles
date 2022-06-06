@@ -1,6 +1,8 @@
 set complete=.,w,b,u
-set nocompatible "be iMproved, required"
-set wrapscan "Cycle search"
+set nocompatible "be iMproved, required
+set wrapscan "Cycle search
+set clipboard=unnamedplus
+set mouse=a
 
 
 "---Splits---"
@@ -13,30 +15,32 @@ nmap <C-H> <C-W><C-H>
 nmap <C-L> <C-W><C-L>
 
 "---General-Styling---"
-set number	"Show line numbers"
-set cursorline "Show cursorline"
-set hlsearch	"Highlight the search"
-set incsearch	"Incremental highlight"
+set title "Show file title
+set number	"Show line numbers
+set cursorline "Show cursorline
+set hlsearch	"Highlight the search
+set incsearch	"Incremental highlight
 set showmode
+set showmatch
 set backspace=indent,eol,start
 set signcolumn=yes
 
-let mapleader = ',' "Default leader is \ but let's use , to set a better namespace"
+let mapleader = ',' "Default leader is \ but let's use , to set a better namespace
 
 
 "---Visuals---"
-syntax enable	"Enable syntax highlight"
-set t_CO=256	"Use 256 colors"
+syntax enable "Enable syntax highlight"
+set t_CO=256 "Use 256 colors"
 "colorscheme delek	"Use custom color scheme"
-"set guifont=Fira_Code:h16
 highlight clear SignColumn
+filetype plugin indent on "auto-indent based on file type
 
 
 "--Indents---"
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab	"Use spaces instead of tabs"
+set expandtab "Use spaces instead of tabs
 
 
 "---Mappings---"
@@ -52,6 +56,7 @@ nmap <Leader>f :tag<space>
 
 "---Plugins---"
 let NERDTreeHijackNetrw = 0
+let NERDTreeShowHidden = 1
 
 "---Auto-commands---"
 
