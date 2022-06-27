@@ -31,8 +31,7 @@ let mapleader = ',' "Default leader is \ but let's use , to set a better namespa
 "---Visuals---"
 syntax enable "Enable syntax highlight"
 set t_CO=256 "Use 256 colors"
-"colorscheme delek	"Use custom color scheme"
-highlight clear SignColumn
+"highlight clear SignColumn
 filetype plugin indent on "auto-indent based on file type
 
 
