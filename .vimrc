@@ -53,13 +53,22 @@ nmap <Leader>f :tag<space>
 "nmap <Leader>1 :NERDTreeToggle<cr>
 "nmap <Leader>f :tag<space>
 
-"---Plugins---"
+
+"---Undo---
+if empty(glob($HOME . '/.vim/undodir'))
+    call mkdir($HOME . '/.vim/undodir', 'p')
+endif
+
+set undofile "Maintain undofiles between sessions
+set undodir=~/.vim/undodir
+
+"---Plugins---
 let NERDTreeHijackNetrw = 0
 let NERDTreeShowHidden = 1
 
 "---Auto-commands---"
 
-"Source vimrc on save automatically"
+"Source vimrc on save automatically
 augroup autosourcing
 	autocmd!
 	autocmd BufWritePost .vimrc source %
