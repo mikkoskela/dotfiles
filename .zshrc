@@ -149,6 +149,8 @@ alias em="emacsclient --create-frame --no-wait"
 alias emw="emacsclient --create-frame"
 alias lg="lazygit"
 alias nv="nvim.appimage"
+alias docker="podman"
+alias dog="~/scripts/dog_util.sh"
 
 # data-tools aliases
 alias ipy="docker run -it --rm ghcr.io/mikkoskela/data-tools:main ipython"
