@@ -203,3 +203,4 @@ unset __conda_setup
 
 # Sourcing
 test -f ~/.shell_completions && source ~/.shell_completions
+

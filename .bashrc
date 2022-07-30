@@ -122,4 +122,4 @@ export EDITOR=vim
 source ~/.bash_completion/alacritty
 
 # Sourcing
-test -f ~/.shell_completions && source ~/.shell_completions
+#test -f ~/.shell_completions && source ~/.shell_completions
