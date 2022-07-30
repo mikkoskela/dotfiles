@@ -31,3 +31,9 @@ complete -C /usr/bin/nomad nomad
 fpath=(/tmp/.mount_vagranZsM86E/usr/gembundle/gems/vagrant-2.2.19/contrib/zsh $fpath)
 compinit
 # <<<<  Vagrant command completion (end)
+
+# >>> scala-cli completions >>>
+fpath=("/home/mikkok/.local/share/scalacli/completions/zsh" $fpath)
+compinit
+# <<< scala-cli completions <<<
+
