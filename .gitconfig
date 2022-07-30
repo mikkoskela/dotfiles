@@ -71,3 +71,6 @@
     autosquash = true
 [pull]
     rebase = true
+[push]
+    autoSetupRemote = true
+
