@@ -20,6 +20,8 @@ set number	"Show line numbers
 set cursorline "Show cursorline
 set hlsearch	"Highlight the search
 set incsearch	"Incremental highlight
+set ignorecase "Ignore case during search
+set smartcase "User smart case for mixed case search
 set showmode
 set showmatch
 set backspace=indent,eol,start
