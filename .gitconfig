@@ -72,5 +72,7 @@
 [pull]
     rebase = true
 [push]
-    autoSetupRemote = true
+	autoSetupRemote = true
 
+[init]
+	defaultBranch = main
