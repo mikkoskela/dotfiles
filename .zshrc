@@ -99,6 +99,7 @@ export PATH="$PATH:$HOME/bin/intellij/bin"
 export PATH="$PATH:$HOME/bin/goland/bin"
 export PATH="$PATH:$HOME/bin/pycharm/bin"
 export PATH="$PATH:$HOME/bin/idea/bin"
+export PATH="$PATH:$HOME/.arkade/bin/"
 
 # Colored man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
